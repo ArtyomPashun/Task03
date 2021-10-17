@@ -1,4 +1,4 @@
-package epamtc.pashunArtyom.task0301.logic;
+package by.epamtc.pashunArtyom.task0301.logic;
 
 public class ArrayBinarySearch {
 

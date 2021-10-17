@@ -1,4 +1,4 @@
-package epamtc.pashunArtyom.task0301.logic;
+package by.epamtc.pashunArtyom.task0301.logic;
 
 import java.util.ArrayList;
 
@@ -58,5 +58,23 @@ public class ArrayValueSearch {
             }
         }
         return fibonacciNumberArrayList;
+    }
+
+    public static ArrayList receiveDifferentThreeDigitNumber(Integer[] array) {
+        ArrayList<Integer> digitNumber = new ArrayList<>();
+
+        for (int number : array) {
+            if (number >= 100 && number <= 999) {
+                int lastDigit = number % 10;
+                int midDigit = number / 10 % 10;
+                int firstDigit = number / 100;
+                if (lastDigit != midDigit && midDigit != firstDigit && lastDigit != firstDigit) {
+                    digitNumber.add(number);
+                }
+            } else {
+                break;
+            }
+        }
+        return digitNumber;
     }
 }

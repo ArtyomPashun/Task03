@@ -1,4 +1,4 @@
-package epamtc.pashunArtyom.task0301.entity;
+package by.epamtc.pashunArtyom.task0301.entity;
 
 import java.util.Arrays;
 

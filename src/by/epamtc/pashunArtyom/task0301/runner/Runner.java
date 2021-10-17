@@ -1,4 +1,4 @@
-package epamtc.pashunArtyom.task0301.runner;
+package by.epamtc.pashunArtyom.task0301.runner;
 
 /* Создание типа Array, который является классом оболочкой над массивом целого типа. В данном типе должны быть реализованы конструкторы (позволяющие несколькими способами создавать объекты типа), get-ы, set-ы и переопределенные методы класса Object (toString(), equals(), hasCode()).
  *Программа должна иметь следующие возможности:
@@ -11,9 +11,28 @@ package epamtc.pashunArtyom.task0301.runner;
  *7. Заполнения элементов массива и с консоли, и с файла и с помощью генерации случайных чисел.
  */
 
+import by.epamtc.pashunArtyom.task0301.entity.IntegerArray;
+import by.epamtc.pashunArtyom.task0301.input.ConsoleReader;
+import by.epamtc.pashunArtyom.task0301.logic.ArrayBinarySearch;
+import by.epamtc.pashunArtyom.task0301.logic.ArraySort;
+import by.epamtc.pashunArtyom.task0301.logic.ArrayValueSearch;
+
 public class Runner {
 
     public static void main(String[] args) {
 
+        ConsoleReader reader = new ConsoleReader();
+
+        IntegerArray integerArray = new IntegerArray(reader.integerInput(5));
+
+        Integer[] array = integerArray.getArray();
+
+        ArraySort.bubbleSort(array);
+        ArrayBinarySearch.binarySearch(array, 2, ArrayValueSearch.receiveMaxValue(array), ArrayValueSearch.receiveMinValue(array));
+        ArrayValueSearch.receiveMaxValue(array);
+        ArrayValueSearch.receiveMinValue(array);
+        ArrayValueSearch.receivePrimeNumberArrayList(array);
+        ArrayValueSearch.receiveFibonacciArrayList(array);
+        ArrayValueSearch.receiveDifferentThreeDigitNumber(array);
     }
 }
