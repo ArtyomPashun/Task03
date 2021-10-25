@@ -2,7 +2,7 @@ package by.epamtc.pashunArtyom.task0302.logic;
 
 public class ArrayBubbleSorter {
 
-    public static int[][] sortArray(int[][] array) {
+    public static void sortArray(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 for (int k = 0; k < array[i].length - 1; k++) {
@@ -14,7 +14,6 @@ public class ArrayBubbleSorter {
                 }
             }
         }
-        return array;
     }
 
     public static void printArray(int[][] array) {

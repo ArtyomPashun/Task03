@@ -2,14 +2,13 @@ package by.epamtc.pashunArtyom.task0302.logic;
 
 public class ArrayStringOrganizer {
 
-    public static int[][] swap(int[][] array, int str1, int str2) {
+    public static void swap(int[][] array, int str1, int str2) {
         int[] temp = array[str1];
         array[str1] = array[str2];
         array[str2] = temp;
-        return array;
     }
 
-    public static int[][] sortByMax(int[][] array) {
+    public static void sortByMax(int[][] array) {
         for (int j = 0; j < array.length; j++) {
             for (int i = 0; i < array.length - 1; i++) {
                 int maxStr1 = array[i][array[i].length - 1];
@@ -19,10 +18,9 @@ public class ArrayStringOrganizer {
                 }
             }
         }
-        return array;
     }
 
-    public static int[][] sortByMin(int[][] array) {
+    public static void sortByMin(int[][] array) {
         for (int j = 0; j < array.length; j++) {
             for (int i = 0; i < array.length - 1; i++) {
                 int minStr1 = array[i][0];
@@ -32,10 +30,9 @@ public class ArrayStringOrganizer {
                 }
             }
         }
-        return array;
     }
 
-    public static int[][] sortBySum(int[][] array) {
+    public static void sortBySum(int[][] array) {
         for (int j = 0; j < array.length; j++) {
             int sumStr1 = 0;
             int sumStr2 = 0;
@@ -49,6 +46,5 @@ public class ArrayStringOrganizer {
                 }
             }
         }
-        return array;
     }
 }
