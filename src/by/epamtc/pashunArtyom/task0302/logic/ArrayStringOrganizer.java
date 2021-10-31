@@ -44,9 +44,9 @@ public class ArrayStringOrganizer {
     public static void sortBySum(int[][] array) {
         for (int j = 0; j < array.length; j++) {
             for (int i = 0; i < array.length - 1; i++) {
-                int sum1 = receiveSum(array[i]);
-                int sum2 = receiveSum(array[i + 1]);
-                if (sum1 > sum2)
+                int sumStr1 = receiveSum(array[i]);
+                int sumStr2 = receiveSum(array[i + 1]);
+                if (sumStr1 > sumStr2)
                     swap(array, i, i + 1);
             }
         }
