@@ -8,6 +8,14 @@ public class ArrayStringOrganizer {
         array[str2] = temp;
     }
 
+    public static int receiveSum(int[] array) {
+        int sum = 0;
+        for (int elem : array) {
+            sum += elem;
+        }
+        return sum;
+    }
+
     public static void sortByMax(int[][] array) {
         for (int j = 0; j < array.length; j++) {
             for (int i = 0; i < array.length - 1; i++) {
@@ -19,6 +27,7 @@ public class ArrayStringOrganizer {
             }
         }
     }
+
 
     public static void sortByMin(int[][] array) {
         for (int j = 0; j < array.length; j++) {
@@ -34,16 +43,11 @@ public class ArrayStringOrganizer {
 
     public static void sortBySum(int[][] array) {
         for (int j = 0; j < array.length; j++) {
-            int sumStr1 = 0;
-            int sumStr2 = 0;
             for (int i = 0; i < array.length - 1; i++) {
-                for (int k = 0; k < array[i].length; k++) {
-                    sumStr1 += array[i][k];
-                    sumStr2 += array[i + 1][k];
-                }
-                if ((sumStr1 < sumStr2)) {
+                int sum1 = receiveSum(array[i]);
+                int sum2 = receiveSum(array[i + 1]);
+                if (sum1 > sum2)
                     swap(array, i, i + 1);
-                }
             }
         }
     }

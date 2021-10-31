@@ -1,5 +1,5 @@
 package by.epamtc.pashunArtyom.task0303.logic;
-
+/*
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,3 +33,4 @@ public class TextEditor {
 
 
 }
+*/

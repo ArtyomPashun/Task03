@@ -24,6 +24,5 @@ public class Runner {
         ArrayStringOrganizer.sortByMin(juggedArray);
         ArrayStringOrganizer.sortByMax(juggedArray);
         ArrayStringOrganizer.sortBySum(juggedArray);
-
     }
 }

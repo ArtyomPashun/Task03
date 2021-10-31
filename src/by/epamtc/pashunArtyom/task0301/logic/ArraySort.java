@@ -2,7 +2,7 @@ package by.epamtc.pashunArtyom.task0301.logic;
 
 public class ArraySort {
 
-    public static Integer[] selectionSort(Integer[] array) {
+    public static void selectionSort(Integer[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int min_idx = i;
 
@@ -15,10 +15,9 @@ public class ArraySort {
             array[min_idx] = array[i];
             array[i] = temp;
         }
-        return array;
     }
 
-    public static Integer[] bubbleSort(Integer[] array) {
+    public static void bubbleSort(Integer[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             boolean noSwaps = true;
             for (int j = 0; j < array.length - i - 1; j++) {
@@ -33,10 +32,9 @@ public class ArraySort {
                 break;
             }
         }
-        return array;
     }
 
-    public static Integer[] countingSort(Integer[] array) {
+    public static void countingSort(Integer[] array) {
         int max = array[0];
         int min = array[0];
         for (int value : array) {
@@ -57,6 +55,5 @@ public class ArraySort {
                 array[j++] = i + min;
             }
         }
-        return array;
     }
 }

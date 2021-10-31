@@ -15,15 +15,6 @@ public class ArrayBubbleSorter {
             }
         }
     }
-
-    public static void printArray(int[][] array) {
-        for (int[] a : array) {
-            for (int b : a) {
-                System.out.print(b + " ");
-            }
-            System.out.println();
-        }
-    }
 }
 
 
