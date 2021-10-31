@@ -12,7 +12,7 @@ public class ConsoleReader {
 
         for (int i = 0; i < number.length; i++) {
             while (!sc.hasNextInt()) {
-                System.out.println(".!.");
+                System.out.println("try again");
                 sc.next();
             }
             number[i] = sc.nextInt();

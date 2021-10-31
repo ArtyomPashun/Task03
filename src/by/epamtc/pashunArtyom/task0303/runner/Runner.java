@@ -8,10 +8,22 @@ package by.epamtc.pashunArtyom.task0303.runner;
  *5. Из текста удалить все слова заданной длины, начинающиеся на согласную букву.
  */
 
+import by.epamtc.pashunArtyom.task0303.logic.TextEditor;
+
+
 public class Runner {
 
     public static void main(String[] args) {
 
-    }
+        String newSubstring = "learn java";
 
+        String inputString = "12345aaa###%%^ aAvvb qq74657467###vv1";
+
+        TextEditor.deleteAllSymbolsExceptLettersAndSpaces(inputString);
+        TextEditor.deleteWordsOfGivenLengthWithConsonantStart(inputString, 3);
+        TextEditor.deleteWordsOfGivenLength(inputString, newSubstring, 3);
+        TextEditor.changeKLetterInEachWord(inputString, 4, 'A');
+        TextEditor.changeLetterAtoOAfterP(inputString);
+
+    }
 }
